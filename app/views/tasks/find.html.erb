@@ -1,0 +1,11 @@
+<%= @task.details %>
+<%= link_to("back to list", tasks_path) %>
+
+<%= link_to "Delete",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+
+<%# tasks_path = localhost:3000/tasks %>
+<%# tasks_path(@task) = localhost:3000/tasks.1 %>
+<%# task_path(@task) = localhost:3000/tasks/:id %>
